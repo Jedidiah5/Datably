@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 7.1%; /* #121212 */
+    --foreground: 0 0% 96.1%; /* #F5F5F5 */
+
+    --card: 0 0% 11.8%; /* #1E1E1E */
+    --card-foreground: 0 0% 96.1%; /* #F5F5F5 */
+
+    --popover: 0 0% 11.8%; /* #1E1E1E */
+    --popover-foreground: 0 0% 96.1%; /* #F5F5F5 */
+
+    --primary: 0 100% 25.1%; /* #800000 Maroon */
+    --primary-foreground: 0 0% 96.1%; /* #F5F5F5 Text on Maroon */
+
+    --secondary: 0 0% 15%; /* Slightly lighter than card */
+    --secondary-foreground: 0 0% 96.1%; /* #F5F5F5 */
+
+    --muted: 0 0% 20%; /* Darker muted background */
+    --muted-foreground: 0 0% 65%; /* Lighter gray for muted text */
+
+    --accent: 0 100% 35.1%; /* Slightly lighter maroon for accents */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
+
+    --destructive: 0 100% 65.1%; /* #FF4D4D Bright Red */
+    --destructive-foreground: 0 0% 98%; /* White text on destructive */
+
+    --border: 0 0% 18%; /* Darker border, slightly lighter than input for visibility */
+    --input: 0 0% 15%; /* Darker input background, same as secondary */
+    --ring: 0 100% 30.1%; /* Maroon for ring, slightly lighter than primary for visibility */
+
+    --chart-1: 0 70% 40%; /* Maroon shade 1 */
+    --chart-2: 0 60% 50%; /* Maroon shade 2 */
+    --chart-3: 30 80% 55%; /* Contrasting orange/yellow */
+    --chart-4: 120 39.4% 49.2%; /* #4CAF50 Success green */
+    --chart-5: 210 70% 50%; /* Contrasting blue */
+    
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors aligned with the theme */
+    --sidebar-background: 0 0% 6%; 
+    --sidebar-foreground: 0 0% 96.1%;
+    --sidebar-primary: 0 100% 25.1%; /* Maroon */
+    --sidebar-primary-foreground: 0 0% 96.1%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 100% 30.1%;
+  }
+
+  /* Apply dark theme by default */
+  .dark {
+    --background: 0 0% 7.1%;
+    --foreground: 0 0% 96.1%;
+    --card: 0 0% 11.8%;
+    --card-foreground: 0 0% 96.1%;
+    --popover: 0 0% 11.8%;
+    --popover-foreground: 0 0% 96.1%;
+    --primary: 0 100% 25.1%;
+    --primary-foreground: 0 0% 96.1%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96.1%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 100% 35.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 100% 65.1%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
+    --ring: 0 100% 30.1%;
+    --chart-1: 0 70% 40%;
+    --chart-2: 0 60% 50%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 120 39.4% 49.2%;
+    --chart-5: 210 70% 50%;
+    --sidebar-background: 0 0% 6%; 
+    --sidebar-foreground: 0 0% 96.1%;
+    --sidebar-primary: 0 100% 25.1%;
+    --sidebar-primary-foreground: 0 0% 96.1%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 100% 30.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Custom font variables application */
+  .font-heading {
+    font-family: var(--font-poppins);
+  }
+  .font-body {
+    font-family: var(--font-open-sans);
+  }
+}
