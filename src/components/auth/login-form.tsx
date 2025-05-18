@@ -72,7 +72,7 @@ export function LoginForm() {
 
   return (
     <div className="w-full max-w-md">
-      <h1 className="text-3xl font-bold text-center mb-2 font-heading text-primary">InsightBoard</h1>
+      <h1 className="text-3xl font-bold text-center mb-2 font-heading text-primary">Datably</h1>
       <p className="text-center text-muted-foreground mb-8">Welcome back! Please login to your account.</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

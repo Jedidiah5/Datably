@@ -1,4 +1,5 @@
 import type { User } from '@/types';
+import { LOCAL_STORAGE_USER_KEY } from '@/lib/constants';
 
 // Mock database of users
 const MOCK_USERS: User[] = [
@@ -54,7 +55,7 @@ export const mockLogout = (): Promise<void> => {
 export const getCurrentUser = (): Promise<User | null> => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const storedUser = localStorage.getItem('insightboard_user');
+            const storedUser = localStorage.getItem(LOCAL_STORAGE_USER_KEY);
             if (storedUser) {
                 resolve(JSON.parse(storedUser) as User);
             } else {

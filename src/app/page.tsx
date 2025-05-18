@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
       <Loader2 className="h-16 w-16 animate-spin text-primary" />
-      <p className="mt-6 text-xl font-semibold text-foreground">Loading InsightBoard...</p>
+      <p className="mt-6 text-xl font-semibold text-foreground">Loading Datably...</p>
     </div>
   );
 }

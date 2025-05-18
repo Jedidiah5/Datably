@@ -18,7 +18,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'InsightBoard',
+  title: 'Datably',
   description: 'Mini Business Intelligence Tool',
 };
 
