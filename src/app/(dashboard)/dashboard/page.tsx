@@ -15,25 +15,25 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="container mx-auto py-8 px-4 md:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold mb-8 font-heading text-foreground">Dashboard</h1>
+    <div className="container mx-auto py-6 sm:py-8 px-4 md:px-6 lg:px-8">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 font-heading text-foreground">Dashboard</h1>
       
       {/* Metrics Summary */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-8">
         {metrics.map(metric => (
           <MetricCard key={metric.title} metric={metric} />
         ))}
       </div>
 
       {/* Charts Section */}
-      <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-8">
-        <div className="lg:col-span-2 xl:col-span-1">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-8">
+        <div className="col-span-1 lg:col-span-2 xl:col-span-1">
            <SalesTrendChart data={mockSalesTrendData} />
         </div>
-        <div className="lg:col-span-1 xl:col-span-1">
+        <div className="col-span-1 lg:col-span-1 xl:col-span-1">
           <UserGrowthChart data={mockUserGrowthData} />
         </div>
-        <div className="lg:col-span-1 xl:col-span-1">
+        <div className="col-span-1 lg:col-span-1 xl:col-span-1">
           <CategoryDistributionChart data={mockCategoryDistributionData} />
         </div>
       </div>

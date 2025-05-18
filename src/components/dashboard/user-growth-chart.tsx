@@ -24,17 +24,17 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
         <CardDescription>Monthly new user acquisitions</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[300px] w-full">
+        <ChartContainer config={chartConfig} className="h-[250px] sm:h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 5, right: 20, left: -20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-              <XAxis dataKey="month" stroke="hsl(var(--foreground))" />
-              <YAxis stroke="hsl(var(--foreground))" />
+              <XAxis dataKey="month" stroke="hsl(var(--foreground))" fontSize={12} />
+              <YAxis stroke="hsl(var(--foreground))" fontSize={12}/>
                <ChartTooltip
                 cursor={false}
                 content={<ChartTooltipContent indicator="dot" />}
               />
-              <Legend />
+              <Legend wrapperStyle={{ fontSize: '0.75rem' }} />
               <Bar dataKey="users" fill="var(--color-users)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>

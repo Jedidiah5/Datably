@@ -24,17 +24,17 @@ export function SalesTrendChart({ data }: SalesTrendChartProps) {
         <CardDescription>Monthly sales performance</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[300px] w-full">
+        <ChartContainer config={chartConfig} className="h-[250px] sm:h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data} margin={{ top: 5, right: 20, left: -20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-              <XAxis dataKey="month" stroke="hsl(var(--foreground))" />
-              <YAxis stroke="hsl(var(--foreground))" />
+              <XAxis dataKey="month" stroke="hsl(var(--foreground))" fontSize={12} />
+              <YAxis stroke="hsl(var(--foreground))" fontSize={12} />
               <ChartTooltip
                 cursor={false}
                 content={<ChartTooltipContent indicator="line" />}
               />
-              <Legend />
+              <Legend wrapperStyle={{ fontSize: '0.75rem' }} />
               <Line type="monotone" dataKey="sales" stroke="var(--color-sales)" strokeWidth={2} dot={{ r: 4, fill: "var(--color-sales)" }} activeDot={{ r: 6 }} />
             </LineChart>
           </ResponsiveContainer>

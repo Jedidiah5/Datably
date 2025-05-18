@@ -28,7 +28,7 @@ export function CategoryDistributionChart({ data }: CategoryDistributionChartPro
       <CardContent className="flex-1 pb-0">
          <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[300px]"
+          className="mx-auto aspect-square max-h-[250px] sm:max-h-[300px]"
         >
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -36,12 +36,12 @@ export function CategoryDistributionChart({ data }: CategoryDistributionChartPro
                 cursor={false}
                 content={<ChartTooltipContent hideLabel />}
               />
-              <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} labelLine={false}>
+              <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}  innerRadius={40} labelLine={false}>
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.fill} />
                 ))}
               </Pie>
-              <ChartLegend content={<ChartLegendContent nameKey="name" />} />
+              <ChartLegend content={<ChartLegendContent nameKey="name" wrapperStyle={{ fontSize: '0.75rem' }} />} />
             </PieChart>
           </ResponsiveContainer>
         </ChartContainer>
