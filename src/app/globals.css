@@ -8,6 +8,64 @@ body {
 
 @layer base {
   :root {
+    /* Light Theme (Default) */
+    --background: 0 0% 98%; /* #FAFAFA */
+    --foreground: 0 0% 3.9%; /* #0A0A0A */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 0 0% 3.9%; /* #0A0A0A */
+
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 0 0% 3.9%; /* #0A0A0A */
+
+    --primary: 0 100% 25.1%; /* #800000 Maroon (Darker, good contrast on light) */
+    --primary-foreground: 0 0% 98%; /* #FAFAFA (Light text on Maroon) */
+
+    --secondary: 0 0% 96.1%; /* #F5F5F5 */
+    --secondary-foreground: 0 0% 9%; /* #171717 */
+
+    --muted: 0 0% 96.1%; /* #F5F5F5 */
+    --muted-foreground: 0 0% 45.1%; /* #737373 */
+
+    --accent: 0 100% 35.1%; /* Lighter Maroon for accents on light bg */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* #FF0000 Bright Red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+
+    --border: 0 0% 89.8%; /* #E5E5E5 */
+    --input: 0 0% 93%; /* #EDEDED */
+    --ring: 0 100% 30.1%; /* Maroon for ring, good visibility */
+
+    /* Chart colors - adjust for light theme if needed, or keep universal if contrast is okay */
+    --chart-1: 0 70% 40%; /* Maroon shade 1 */
+    --chart-2: 0 60% 50%; /* Maroon shade 2 */
+    --chart-3: 30 80% 55%; /* Contrasting orange/yellow */
+    --chart-4: 120 39.4% 49.2%; /* #4CAF50 Success green */
+    --chart-5: 210 70% 50%; /* Contrasting blue */
+    
+    /* Pie chart specific colors - assuming these are okay for both themes or user will refine */
+    --pie-category-red: 0 100% 65.1%; /* Bright Red */
+    --pie-category-purple: 270 60% 50%; /* Purple */
+    --pie-category-black: 0 0% 10%; /* Very Dark Gray / Near Black (might need adjustment for light)*/
+    /* Consider a lighter black for light theme: --pie-category-black-light: 0 0% 20%; */
+
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors for Light Theme */
+    --sidebar-background: 0 0% 96%; /* Light Gray */
+    --sidebar-foreground: 0 0% 9%;   /* Dark Text */
+    --sidebar-primary: 0 100% 25.1%; /* Maroon */
+    --sidebar-primary-foreground: 0 0% 98%; /* Light text on Maroon */
+    --sidebar-accent: 0 0% 90%; /* Slightly darker gray for accents */
+    --sidebar-accent-foreground: 0 0% 9%; /* Dark Text on accent */
+    --sidebar-border: 0 0% 85%; /* Light border */
+    --sidebar-ring: 0 100% 30.1%; /* Maroon for ring */
+  }
+
+  .dark {
+    /* Dark Theme Overrides */
     --background: 0 0% 7.1%; /* #121212 */
     --foreground: 0 0% 96.1%; /* #F5F5F5 */
 
@@ -32,69 +90,22 @@ body {
     --destructive: 0 100% 65.1%; /* #FF4D4D Bright Red */
     --destructive-foreground: 0 0% 98%; /* White text on destructive */
 
-    --border: 0 0% 18%; /* Darker border, slightly lighter than input for visibility */
-    --input: 0 0% 15%; /* Darker input background, same as secondary */
-    --ring: 0 100% 30.1%; /* Maroon for ring, slightly lighter than primary for visibility */
-
-    --chart-1: 0 70% 40%; /* Maroon shade 1 */
-    --chart-2: 0 60% 50%; /* Maroon shade 2 */
-    --chart-3: 30 80% 55%; /* Contrasting orange/yellow */
-    --chart-4: 120 39.4% 49.2%; /* #4CAF50 Success green */
-    --chart-5: 210 70% 50%; /* Contrasting blue */
+    --border: 0 0% 18%; /* Darker border */
+    --input: 0 0% 15%; /* Darker input background */
+    --ring: 0 100% 30.1%; /* Maroon for ring */
     
-    /* New pie chart specific colors */
-    --pie-category-red: 0 100% 65.1%; /* Bright Red, same as destructive */
-    --pie-category-purple: 270 60% 50%; /* Purple */
-    --pie-category-black: 0 0% 10%; /* Very Dark Gray / Near Black */
+    /* Chart colors for Dark Theme (can be same if universal, or overridden) */
+    /* --chart-1: ...; if specific dark theme chart colors are needed */
 
-    --radius: 0.5rem;
+    /* Pie chart specific colors for Dark Theme (already defined, seem okay for dark) */
+    /* --pie-category-red: 0 100% 65.1%; */
+    /* --pie-category-purple: 270 60% 50%; */
+    /* --pie-category-black: 0 0% 10%; */
 
-    /* Sidebar specific colors aligned with the theme */
+    /* Sidebar specific colors for Dark Theme */
     --sidebar-background: 0 0% 6%; 
     --sidebar-foreground: 0 0% 96.1%;
     --sidebar-primary: 0 100% 25.1%; /* Maroon */
-    --sidebar-primary-foreground: 0 0% 96.1%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 96.1%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 0 100% 30.1%;
-  }
-
-  /* Apply dark theme by default */
-  .dark {
-    --background: 0 0% 7.1%;
-    --foreground: 0 0% 96.1%;
-    --card: 0 0% 11.8%;
-    --card-foreground: 0 0% 96.1%;
-    --popover: 0 0% 11.8%;
-    --popover-foreground: 0 0% 96.1%;
-    --primary: 0 100% 25.1%;
-    --primary-foreground: 0 0% 96.1%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 96.1%;
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 0 100% 35.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 100% 65.1%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 15%;
-    --ring: 0 100% 30.1%;
-    --chart-1: 0 70% 40%;
-    --chart-2: 0 60% 50%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 120 39.4% 49.2%;
-    --chart-5: 210 70% 50%;
-
-    /* New pie chart specific colors for dark theme */
-    --pie-category-red: 0 100% 65.1%;
-    --pie-category-purple: 270 60% 50%;
-    --pie-category-black: 0 0% 10%;
-
-    --sidebar-background: 0 0% 6%; 
-    --sidebar-foreground: 0 0% 96.1%;
-    --sidebar-primary: 0 100% 25.1%;
     --sidebar-primary-foreground: 0 0% 96.1%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 96.1%;
@@ -109,6 +120,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    /* Ensure smooth color transitions */
+    @apply transition-colors duration-300 ease-in-out;
   }
   /* Custom font variables application */
   .font-heading {
