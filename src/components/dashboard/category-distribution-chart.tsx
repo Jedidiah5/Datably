@@ -14,16 +14,17 @@ const chartConfig = {
     label: "Items", // A generic label, specific labels come from data
   },
   // Define colors for categories to match the 'fill' properties in mockCategoryDistributionData
-  electronics: { label: "Electronics", color: "hsl(var(--chart-1))" }, // Maroon
-  clothing: { label: "Clothing", color: "hsl(var(--chart-3))" },    // Orange/Yellow
-  groceries: { label: "Groceries", color: "hsl(var(--chart-4))" },  // Green
-  books: { label: "Books", color: "hsl(var(--chart-5))" },       // Blue
+  electronics: { label: "Electronics", color: "hsl(var(--chart-1))" }, 
+  clothing: { label: "Clothing", color: "hsl(var(--chart-2))" },    
+  groceries: { label: "Groceries", color: "hsl(var(--chart-3))" },  
+  books: { label: "Books", color: "hsl(var(--chart-4))" },      
+  homeGoods: { label: "Home Goods", color: "hsl(var(--chart-5))" }, 
 } satisfies ChartConfig
 
 
 export function CategoryDistributionChart({ data }: CategoryDistributionChartProps) {
   return (
-    <Card className="shadow-lg flex flex-col">
+    <Card className="shadow-lg flex flex-col hover:shadow-xl transition-all duration-300 hover:scale-[1.01] animate-fadeIn">
       <CardHeader>
         <CardTitle className="font-heading">Category Distribution</CardTitle>
         <CardDescription>Sales distribution by product category</CardDescription>

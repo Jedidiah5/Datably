@@ -18,7 +18,7 @@ const chartConfig = {
 
 export function SalesTrendChart({ data }: SalesTrendChartProps) {
   return (
-    <Card className="shadow-lg">
+    <Card className="shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.01] animate-fadeIn">
       <CardHeader>
         <CardTitle className="font-heading">Sales Trends</CardTitle>
         <CardDescription>Monthly sales performance</CardDescription>

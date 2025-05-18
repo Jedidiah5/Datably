@@ -87,7 +87,7 @@ export function UserDataTable({ data }: UserDataTableProps) {
 
 
   return (
-    <Card className="shadow-lg col-span-1 md:col-span-2 xl:col-span-3">
+    <Card className="shadow-lg col-span-1 md:col-span-2 xl:col-span-3 hover:shadow-xl transition-all duration-300 hover:scale-[1.01] animate-fadeIn">
       <CardHeader>
         <CardTitle className="font-heading">User Data</CardTitle>
         <CardDescription>Overview of registered users</CardDescription>

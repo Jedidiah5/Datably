@@ -18,7 +18,7 @@ const chartConfig = {
 
 export function UserGrowthChart({ data }: UserGrowthChartProps) {
   return (
-    <Card className="shadow-lg">
+    <Card className="shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.01] animate-fadeIn">
       <CardHeader>
         <CardTitle className="font-heading">User Growth</CardTitle>
         <CardDescription>Monthly new user acquisitions</CardDescription>

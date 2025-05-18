@@ -9,7 +9,7 @@ interface MetricCardProps {
 export function MetricCard({ metric }: MetricCardProps) {
   const Icon = metric.icon;
   return (
-    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <Card className="shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-fadeIn">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-muted-foreground">
           {metric.title}
