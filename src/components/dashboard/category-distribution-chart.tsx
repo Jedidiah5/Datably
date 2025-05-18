@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Pie, PieChart, Tooltip, Legend, ResponsiveContainer, Cell } from "recharts"
@@ -9,16 +10,13 @@ interface CategoryDistributionChartProps {
   data: CategoryDistributionItem[];
 }
 
+// Updated chartConfig to align with src/lib/data.ts fill properties
 const chartConfig = {
-  items: {
-    label: "Items", // A generic label, specific labels come from data
-  },
-  // Define colors for categories to match the 'fill' properties in mockCategoryDistributionData
   electronics: { label: "Electronics", color: "hsl(var(--chart-1))" }, 
-  clothing: { label: "Clothing", color: "hsl(var(--chart-2))" },    
-  groceries: { label: "Groceries", color: "hsl(var(--chart-3))" },  
-  books: { label: "Books", color: "hsl(var(--chart-4))" },      
-  homeGoods: { label: "Home Goods", color: "hsl(var(--chart-5))" }, 
+  clothing: { label: "Clothing", color: "hsl(var(--chart-3))" },    // Aligned with data which uses chart-3 for Clothing
+  groceries: { label: "Groceries", color: "hsl(var(--chart-4))" },  // Aligned with data which uses chart-4 for Groceries
+  books: { label: "Books", color: "hsl(var(--chart-5))" },      // Aligned with data which uses chart-5 for Books
+  // Removed 'items' and 'homeGoods' as they are not in the current data or are too generic
 } satisfies ChartConfig
 
 
