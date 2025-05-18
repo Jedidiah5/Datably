@@ -42,6 +42,11 @@ body {
     --chart-4: 120 39.4% 49.2%; /* #4CAF50 Success green */
     --chart-5: 210 70% 50%; /* Contrasting blue */
     
+    /* New pie chart specific colors */
+    --pie-category-red: 0 100% 65.1%; /* Bright Red, same as destructive */
+    --pie-category-purple: 270 60% 50%; /* Purple */
+    --pie-category-black: 0 0% 10%; /* Very Dark Gray / Near Black */
+
     --radius: 0.5rem;
 
     /* Sidebar specific colors aligned with the theme */
@@ -81,6 +86,12 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 120 39.4% 49.2%;
     --chart-5: 210 70% 50%;
+
+    /* New pie chart specific colors for dark theme */
+    --pie-category-red: 0 100% 65.1%;
+    --pie-category-purple: 270 60% 50%;
+    --pie-category-black: 0 0% 10%;
+
     --sidebar-background: 0 0% 6%; 
     --sidebar-foreground: 0 0% 96.1%;
     --sidebar-primary: 0 100% 25.1%;

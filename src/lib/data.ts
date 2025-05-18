@@ -18,11 +18,12 @@ export const mockUserGrowthData: UserGrowthItem[] = [
   { month: 'Jun', users: 400 },
 ];
 
+// Updated data for pie chart with 3 categories and new colors
 export const mockCategoryDistributionData: CategoryDistributionItem[] = [
-  { name: 'Electronics', value: 400, fill: 'var(--color-chart-1)' }, // Was chart-1 (Maroon)
-  { name: 'Clothing', value: 300, fill: 'var(--color-chart-3)' },    // Was chart-2, now chart-3 (Orange/Yellow)
-  { name: 'Groceries', value: 300, fill: 'var(--color-chart-4)' },  // Was chart-3, now chart-4 (Green)
-  { name: 'Books', value: 200, fill: 'var(--color-chart-5)' },       // Was chart-4, now chart-5 (Blue)
+  { name: 'Electronics', value: 400, fill: 'hsl(var(--pie-category-red))' },
+  { name: 'Clothing', value: 300, fill: 'hsl(var(--pie-category-purple))' },
+  { name: 'Groceries', value: 250, fill: 'hsl(var(--pie-category-black))' }, 
+  // Removed 'Books' and adjusted 'Groceries' value for a 3-item example
 ];
 
 export const mockUserData: UserDataItem[] = [

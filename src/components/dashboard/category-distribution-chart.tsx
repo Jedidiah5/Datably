@@ -10,13 +10,11 @@ interface CategoryDistributionChartProps {
   data: CategoryDistributionItem[];
 }
 
-// Updated chartConfig to align with src/lib/data.ts fill properties
+// Updated chartConfig for new colors and categories
 const chartConfig = {
-  electronics: { label: "Electronics", color: "hsl(var(--chart-1))" }, 
-  clothing: { label: "Clothing", color: "hsl(var(--chart-3))" },    // Aligned with data which uses chart-3 for Clothing
-  groceries: { label: "Groceries", color: "hsl(var(--chart-4))" },  // Aligned with data which uses chart-4 for Groceries
-  books: { label: "Books", color: "hsl(var(--chart-5))" },      // Aligned with data which uses chart-5 for Books
-  // Removed 'items' and 'homeGoods' as they are not in the current data or are too generic
+  electronics: { label: "Electronics", color: "hsl(var(--pie-category-red))" },
+  clothing: { label: "Clothing", color: "hsl(var(--pie-category-purple))" },
+  groceries: { label: "Groceries", color: "hsl(var(--pie-category-black))" },
 } satisfies ChartConfig
 
 
